@@ -1,0 +1,214 @@
+ body{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+ }
+ 
+ .containerBody {
+    display:flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: flex-start;
+    width: 100vw;
+    height: 40%;
+    overflow: hidden;
+}
+#imageBackFooter {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.containerText {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    flex-direction: row;
+     
+     z-index: 20;
+     justify-content: space-around;
+     align-items: center;
+}
+ 
+ 
+.textFirst {
+    background-color: #f9f9f9; /* Light background for the section */
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Optional: Set max-width for responsiveness */
+    margin: 20px auto; /* Centers the section horizontally */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.textFirst:hover {
+    background-color: #386485; /* Light blue background on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow effect */
+    transform: translateX(10px) translateY(20px);
+}
+.textFirst:hover .contact{
+    font-size: 20px;
+    padding-left: 10px;
+    color: gainsboro;
+
+}
+.textFirst:hover .contact-item{
+    font-size: 20px;
+    padding-left: 10px;
+    color: gainsboro;
+    
+}
+.contact {
+    font-size: 24px;
+    font-weight: bold;
+    height: 30%;
+    color: #333;
+    text-align: center; /* Centers the heading */
+    margin-bottom: 20px;
+    padding-left: 0;
+    transition: padding-left 0.3s ease-in;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding-left: 0;
+    cursor: pointer;
+}
+
+.contact-item {
+    font-size: 18px;
+    color: #555;
+    padding-left: 0;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: padding-left 0.3s ease-in;
+}
+
+.contact-item strong {
+    color: #333;
+    margin-right: 8px;
+    font-weight: 600;
+}
+
+.contact-item:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+    padding-left: 10px; /* Adds a little left padding on hover for effect */
+    transition: padding-left 0.3s ease, background-color 0.3s ease;
+}
+.textSecond {
+    background-color: #f4f4f4; /* Light background color */
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Optional: Set max-width for responsiveness */
+    margin: 20px auto; /* Center the section */
+}
+
+.textSecond h3 {
+    font-size: 24px;
+    font-weight: bold;
+    height: 30%;
+    color: #333;
+    text-align: center; /* Centers the heading */
+    margin-bottom: 20px;
+    padding-left: 0;
+    transition: font-size 0.3s ease-in, padding-left 0.3s ease-in,color 0.3s ease-in;
+}
+.textSecond:hover {
+    background-color: #24587d; /* Light blue background on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow effect */
+    transform: translateX(10px) translateY(20px);
+}
+.textSecond:hover h3{
+    font-size: 28px;
+    padding-left: 10px;
+    color: rgb(226, 234, 18);
+    
+
+}
+.textSecond:hover .social-link{
+    font-size: 20px;
+    padding-left: 10px;
+    color: gainsboro;
+    
+}
+.social-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.social-item {
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 0;
+    transition: color 0.3s ease, transform 0.2s ease, padding-left 0.3s ease-in;
+}
+
+.social-link i {
+    margin-right: 10px; /* Space between the icon and text */
+    font-size: 20px; /* Icon size */
+}
+
+.social-link:hover {
+    color: #0077b5; /* LinkedIn blue color, can change based on the platform */
+    transform: translateX(5px); /* Subtle slide effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .textFirst {
+        max-width: 100%; /* Makes the section full width on mobile */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .contact {
+        font-size: 22px; /* Adjust heading font size on mobile */
+    }
+
+    .contact-item {
+        font-size: 14px; /* Adjust list item font size on mobile */
+    }
+}
+@media (max-width: 768px) {
+    .textSecond {
+        max-width: 100%; /* Full width on mobile */
+        padding: 15px; /* Adjust padding for mobile screens */
+    }
+
+    .textSecond h3 {
+        font-size: 22px; /* Adjust heading font size */
+    }
+
+    .social-link {
+        font-size: 16px; /* Adjust font size of the social links */
+    }
+}
