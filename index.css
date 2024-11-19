@@ -38,7 +38,17 @@
      align-items: center;
 }
  
- 
+.scroll-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.5s ease-out;
+  }
+  
+  /* Class to apply animation */
+  .scroll-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 .textFirst {
     background-color: #f9f9f9; /* Light background for the section */
     padding: 20px;
